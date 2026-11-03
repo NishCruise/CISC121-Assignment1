@@ -1,0 +1,8 @@
+def solution(A):
+    missing_pair=set() #Creates an empty set to sort missing pairs into
+    for num in A:
+        if num in missing_pair:  #If the number is in the set then it is removed else it is added
+                missing_pair.remove(num)
+        else:
+                missing_pair.add(num)
+    return missing_pair.pop()

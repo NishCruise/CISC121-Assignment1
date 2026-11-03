@@ -1,0 +1,9 @@
+def solution(X, Y, D):
+	num_of_jumps = 0 
+	start_position = X
+	
+	while start_position < Y:
+		start_position = start_position + D
+		num_of_jumps = num_of_jumps + 1
+	
+	return num_of_jumps

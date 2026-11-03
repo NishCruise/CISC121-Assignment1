@@ -1,0 +1,7 @@
+def solution(A):
+	present_nums = set(A)
+	n = len(A)
+	
+	for nums in range(1, n+2): #Fix: (1, n+1) --> (1, n+2). Google Gemini Helped me debug 
+		if nums not in present_nums: #this code and understand why n+2 is necessary
+			return nums

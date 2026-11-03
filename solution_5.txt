@@ -1,0 +1,16 @@
+def solution(A):
+    min_difference = None #Cant be 0
+   
+    for P in range(1, len(A)): #Google Gemini helped me find the error with len(A-1)
+        left_slice = A[:P] # Google Gemini helped me with the [:P] as shown in Solution_5_AICHAT
+        right_slice = A[P:]
+
+
+        abs_difference = abs(sum(left_slice)-sum(right_slice))
+
+
+        if min_difference is None or abs_difference < min_difference:
+            min_difference = abs_difference
+
+
+    return min_difference

@@ -1,0 +1,10 @@
+def solution(A, K):
+    if A==[] or K==0: #This deals with edge cases like the list A being empty or K equalling 0
+        return A
+    K=K % len(A) #Deals with edge case if K is larger than list length
+    if K==0:
+        return A
+    for nums in range(K):
+        final_int = A.pop() #This rotates the list however many K times
+        A.insert(0, final_int)
+    return A
